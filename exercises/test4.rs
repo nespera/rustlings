@@ -12,8 +12,12 @@ macro_rules! my_macro {
     };
 }
 
-fn main() {
-    if my_macro!("world!") != "Hello world!" {
-        panic!("Oh no! Wrong output!");
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn returns_expected_output() {
+        assert_eq!(my_macro!("world!"), "Hello world!");
     }
 }
