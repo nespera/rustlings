@@ -1,7 +1,5 @@
 // iterators4.rs
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return factorial of num
     // Do not use:
@@ -12,6 +10,8 @@ pub fn factorial(num: u64) -> u64 {
     // For the most fun don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+
+    std::ops::Range{ start: 1, end: num + 1}.into_iter().fold(1, |p, i| i*p)
 }
 
 #[cfg(test)]
