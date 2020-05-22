@@ -1,5 +1,5 @@
-// test4.rs
-// This test covers the sections:
+// quiz4.rs
+// This quiz covers the sections:
 // - Modules
 // - Macros
 
