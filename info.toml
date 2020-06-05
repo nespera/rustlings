@@ -68,7 +68,7 @@ then keyword 'let'.
 Constants types must also always be annotated.
 
 Read more about constants under 'Differences Between Variables and Constants' in the book's section 'Variables and Mutability': 
-https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#differences-between-variables-and-constants
 """
 
 # IF
@@ -311,7 +311,7 @@ hint = "No hints this time ;)"
 # TESTS
 
 [[exercises]]
-name = "quiz1"
+name = "tests1"
 path = "exercises/tests/tests1.rs"
 mode = "test"
 hint = """
@@ -613,6 +613,24 @@ hint = """
 `for` loops over Option values are more clearly expressed as an `if let`"""
 
 # STANDARD LIBRARY TYPES
+
+[[exercises]]
+name = "box1"
+path = "exercises/standard_library_types/box1.rs"
+mode = "test"
+hint = """
+Step 1
+The compiler's message should help: since we cannot store the value of the actual type
+when working with recursive types, we need to store a reference (pointer) to its value.
+We should, therefore, place our `List` inside a `Box`. More details in the book here:
+https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes
+
+Step 2
+Creating an empty list should be fairly straightforward (hint: peek at the assertions).
+For a non-empty list keep in mind that we want to use our Cons "list builder".
+Although the current list is one of integers (i32), feel free to change the definition
+and try other types!
+"""
 
 [[exercises]]
 name = "arc1"
