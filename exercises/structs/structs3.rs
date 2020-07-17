@@ -45,7 +45,7 @@ mod tests {
     fn create_international_package() {
         let country_from = String::from("Spain");
         let country_to = String::from("Russia");
-        
+
         let package = Package::new(country_from, country_to, 1.2);
 
         assert!(package.is_international());
@@ -57,9 +57,9 @@ mod tests {
         let country_to = String::from("Spain");
 
         let country_fee = 8.0;
-        
+
         let package = Package::new(country_from, country_to, 22.0);
-        
+
         assert_eq!(package.get_fees(country_fee), 176.0);
     }
 }
